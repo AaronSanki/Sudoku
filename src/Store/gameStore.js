@@ -54,7 +54,7 @@ const gameState = (set) => ({
                     return obj;
                 return {default: false, pencilValue: 0, value: 0}
             }))
-            return {...state, qBoard, mistakes: state.mode.mistakes, selectedCell: {row: null, col: null, square: null}, hints: state.mode.hints, gameOver: false, isPaused: false, time: 0}
+            return {...state, qBoard, mistakes: state.mode.mistakes, selectedCell: {row: null, col: null, square: null}, hints: state.mode.hints, gameOver: false, isPaused: false, time: 0, nums: state.freq}
         })
     },
 
