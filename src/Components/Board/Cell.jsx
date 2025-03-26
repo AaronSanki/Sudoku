@@ -29,7 +29,7 @@ function Cell({row, col}) {
                 ? `${darkMode?"bg-zinc-950":"bg-indigo-200"} ${!qBoard[row][col].default&&"cursor-pointer"}`
                 : qBoard[row][col].default
                     ? `${darkMode?"bg-zinc-900":"bg-blue-300"}`
-                    : `${darkMode?"bg-stone-900":"bg-blue-100"} ${!isPaused&&!gameOver&&!win&&`cursor-pointer ${darkMode?"hover:bg-stone-950":"bg-blue-200"} hover:outline hover:outline-[1px]`}`
+                    : `${darkMode?"bg-stone-900":"bg-blue-100"} ${!isPaused&&!gameOver&&!win&&qBoard[row][col].value != board[row][col]&&`cursor-pointer ${darkMode?"hover:bg-stone-950":"bg-blue-200"} hover:outline hover:outline-[1px]`}`
         }`}>
             {qBoard[row][col].value != 0
             && <span className={`text-2xl md:text-3xl ${qBoard[row][col].default && selectedStatus.other && "text-gray-500"} ${qBoard[row][col].value!=board[row][col] && "text-rose-800"}`}>

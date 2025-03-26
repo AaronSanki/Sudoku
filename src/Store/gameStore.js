@@ -76,7 +76,7 @@ const gameState = (set) => ({
         set((state) => {
             const row = state.selectedCell.row;
             const col = state.selectedCell.col;
-            if (state.nums[num] > 0 && !state.isPaused && !state.gameOver && row !== null && col !== null && !state.qBoard[row][col].default) {
+            if (state.nums[num] > 0 && !state.isPaused && !state.gameOver && row !== null && col !== null && !state.qBoard[row][col].default && state.qBoard[row][col].value != state.board[row][col]) {
                 const qBoard = state.qBoard.map(row => row.map(cell => ({ ...cell })))
                 let mistakes = state.mistakes
                 let gameOver = state.gameOver
